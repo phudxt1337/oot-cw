@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<HTML>
+
+    <head>
+        <title>::Products::</title>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+
+    <body>
+        <div class="menu">
+            <nav>
+                <h2 class="name">In-Store <span>Search System</span></h2>
+                <ul>
+                    <li><a href="{% url 'index'%}">Home</a></li>
+                    <li><a href="{% url 'products'%}">Products</a></li>
+                </ul>
+                <button type="button">Login</button>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <div class="filter">
+                <h2 id="headtxt">Filter</h2>
+                <a href="{% url 'products'%}">All</a>
+                <a href="{% url 'products_pen'%}">Pen</a>
+                <a href="{% url 'products_pencil'%}">Pencil</a>
+                <a href="{% url 'products_case'%}">Case</a>
+                <a href="#" id="current">Notebook</a>
+            </div>
+        </div>
+        <div class="main_content">
+            <h3 >15 Items found!!!!!!!!!!!!!!!</h3>
+            <div class="container">
+                <h3 >3 Items found!</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="{% static 'img/PackRuledNotes.jpg' %}">
+                        </div>
+                        <div class="item-detail">
+                            <a href="#" class="item-name">Pack ruled notes</a>
+                            <div class="item-price">
+                                <span>150 THB</span>
+                            </div>
+                            <p>5 Pack Ruled Notebook Set</p>
+                            <button type="button" class="buy-btn">Buy</button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="{% static 'img/RuledNote.jpg' %}">
+                        </div>
+                        <div class="item-detail">
+                            <a href="#" class="item-name">Ruled note</a>
+                            <div class="item-price">
+                                <span>60 THB</span>
+                            </div>
+                            <p>Planting Tree Paper Double Ringed Ruled Notebook</p>
+                            <button type="button" class="buy-btn">Buy</button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="{%static 'img/BlankNote.jpg' %}">
+                        </div>
+                        <div class="item-detail">
+                            <a href="#" class="item-name">Blank note</a>
+                            <div class="item-price">
+                                <span>60 THB</span>
+                            </div>
+                            <p>Recycled Paper Bind Plain Pocket Notebook</p>
+                            <button type="button" class="buy-btn">Buy</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</HTML>
